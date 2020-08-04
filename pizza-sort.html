@@ -17,12 +17,12 @@
         (function() {
             "use strict";
             // test to console
-            // $.ajax("pizzas.json").done(function (data) {
-            //     console.log("started");
-            //     console.log(data);
-            // });
+            $.ajax("ingredients.json").done(function (data) {
+                console.log("started");
+                console.log(data);
+            });
 
-            $.ajax('pizzas.json').done(function(data) {
+            $.ajax('ingredients.json').done(function(data) {
                 for (var i = 0; i < data.length; i++) {
                     $('#toppings').append('<h2>' + data[i].toppings + '</h2>');
                 }
